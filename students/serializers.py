@@ -9,7 +9,7 @@ class StudentSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Student
-        fields = ('matriculation_number', 'name', 'year', 'course', 'modules')
+        fields = ('matric', 'name', 'year', 'course', 'modules')
 
 
 class TakeModuleSerializer(serializers.ModelSerializer):

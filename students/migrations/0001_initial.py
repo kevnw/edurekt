@@ -14,7 +14,7 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Student',
             fields=[
-                ('matric_number', models.CharField(default='A0000000A', max_length=9, primary_key=True, serialize=False)),
+                ('matric', models.CharField(default='A0000000A', max_length=9, primary_key=True, serialize=False)),
                 ('name', models.CharField(max_length=256)),
                 ('year', models.PositiveSmallIntegerField(default=1)),
                 ('course', models.CharField(max_length=256)),

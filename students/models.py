@@ -3,7 +3,7 @@ from django.db import models
 from modules.models import Module
 
 class Student(models.Model):
-    matric_number = models.CharField(primary_key=True, max_length=9, blank=False)
+    matric = models.CharField(primary_key=True, max_length=9, blank=False)
     name = models.CharField(max_length=256, blank=False)
     year = models.PositiveSmallIntegerField(blank=False, default=1)
     course = models.CharField(max_length=256, blank=False)
@@ -11,7 +11,7 @@ class Student(models.Model):
     modules = models.ManyToManyField(Module, related_name='students', through='TakeModule')
 
     def __str__ (self):
-        return "{}: {} ({}:{})".format(self.matric_number, self.name, self.year, self.course)
+        return "{}: {} ({}:{})".format(self.matric, self.name, self.year, self.course)
 
 
 class TakeModule(models.Model):
